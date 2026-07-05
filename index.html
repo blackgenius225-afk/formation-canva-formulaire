@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription — Formation Canva été</title>
+  <style>
+    :root{
+      --navy:#1b1a4d;
+    --coral:#ff8a65;
+          --coral-dark:#f4694a;
+          --cream:#fff6ea;
+          --green:#146b2e;
+}
+  *{box-sizing:border-box;}
+  body{
+        margin:0;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:linear-gradient(180deg,#fff3e6 0%,#ffe3d3 45%,#ffb99b 100%);
+          min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:32px 16px 60px;
+}
+  .header{
+        text-align:center;
+    max-width:640px;
+    margin-bottom:8px;
+}
+  .header h1{
+        color:var(--navy);
+    font-size:2.4rem;
+    font-weight:800;
+    margin:0 0 4px;
+    letter-spacing:0.5px;
+  }
+  .header h2{
+        color:var(--navy);
+    font-size:1.6rem;
+    font-weight:700;
+    margin:0 0 14px;
+  }
+  .header p{
+    color:var(--navy);
+    font-weight:600;
+    font-size:1.05rem;
+    margin:2px 0;
+}
+  .badge{
+    display:inline-block;
+    margin-top:16px;
+    background:var(--coral);
+    color:#fff;
+    font-weight:800;
+    font-size:1.3rem;
+    padding:10px 26px;
+    border-radius:14px;
+}
+
+  .urgency{
+    max-width:640px;
+    width:100%;
+    margin-top:22px;
+    background:#fff2ea;
+        border:2px solid var(--coral);
+    color:var(--coral-dark);
+    font-weight:700;
+    text-align:center;
+    padding:12px 18px;
+    border-radius:14px;
+    font-size:0.98rem;
+}
+  .urgency span{ font-size:1.1rem; margin-right:6px; }
+
+      .social-proof{
+    max-width:640px;
+    width:100%;
+    margin-top:18px;
+        display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+      }
+        .stat{
+    background:#ffffff;
+    border-radius:14px;
+        padding:14px 20px;
+          text-align:center;
+        box-shadow:0 6px 16px rgba(27,26,77,0.1);
+        min-width:140px;
+          flex:1;
+}
+  .stat .num{
+    color:var(--coral-dark);
+    font-weight:800;
+    font-size:1.5rem;
+        display:block;
+}
+  .stat .label{
+    color:var(--navy);
+    font-size:0.82rem;
+    font-weight:600;
+    opacity:0.85;
+      }
+
+  .testimonial{
+    max-width:640px;
+    width:100%;
+    margin-top:16px;
+    background:#ffffff;
+    border-radius:16px;
+    padding:18px 22px;
+    box-shadow:0 6px 16px rgba(27,26,77,0.1);
+    font-style:italic;
+    color:var(--navy);
+          font-size:0.95rem;
+    line-height:1.5;
+    }
+      .testimonial .author{
+        display:block;
+    margin-top:8px;
+        font-style:normal;
+    font-weight:700;
+    font-size:0.85rem;
+        color:var(--coral-dark);
+}
+
+  .card{
+    background:#ffffff;
+    border-radius:20px;
+          box-shadow:0 12px 30px rgba(27,26,77,0.15);
+    width:100%;
+    max-width:640px;
+    padding:8px;
+    margin-top:28px;
+    overflow:hidden;
+}
+  .card-inner{
+        border-radius:14px;
+    overflow:hidden;
+}
+  iframe{
+        width:100%;
+    height:900px;
+    border:none;
+    display:block;
+}
+  .fallback{
+    text-align:center;
+    margin-top:18px;
+    font-size:0.95rem;
+        color:var(--navy);
+}
+  .fallback a{
+    color:var(--coral-dark);
+    font-weight:700;
+        text-decoration:none;
+}
+        .fallback a:hover{ text-decoration:underline; }
+
+  .faq{
+    max-width:640px;
+    width:100%;
+    margin-top:36px;
+}
+  .faq h3{
+    color:var(--navy);
+          text-align:center;
+    font-size:1.4rem;
+    margin-bottom:16px;
+      }
+        .faq-item{
+    background:#ffffff;
+    border-radius:14px;
+    margin-bottom:10px;
+    box-shadow:0 4px 12px rgba(27,26,77,0.08);
+    overflow:hidden;
+    }
+  .faq-item summary{
+    cursor:pointer;
+            list-style:none;
+        padding:16px 20px;
+    font-weight:700;
+    color:var(--navy);
+    display:flex;
+        justify-content:space-between;
+          align-items:center;
+}
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{
+              content:"+";
+    color:var(--coral-dark);
+      font-size:1.4rem;
+    font-weight:800;
+    margin-left:12px;
+}
+  .faq-item[open] summary::after{ content:"–"; }
+  .faq-item p{
+        margin:0;
+    padding:0 20px 16px;
+    color:var(--navy);
+    opacity:0.85;
+    font-size:0.92rem;
+    line-height:1.5;
+}
+
+  .footer{
+        margin-top:36px;
+    text-align:center;
+    color:var(--navy);
+}
+  .footer .phone{
+    display:inline-block;
+    background:#ffd8c2;
+        color:var(--green);
+    font-weight:800;
+    font-size:1.4rem;
+    padding:10px 24px;
+    border-radius:14px;
+    margin-top:6px;
+  }
+  .brand{
+        margin-top:26px;
+    font-size:0.8rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--navy);
+    opacity:0.7;
+}
+</style>
+  </head>
+  <body>
+
+    <div class="header">
+      <h1>Formation Canva été</h1>
+    <h2>pour tous — Adultes · Ados · Enfants</h2>
+      <p>À partir du 04 juillet 2026 · En ligne</p>
+      <div class="badge">80&nbsp;$ / mois</div>
+    </div>
+
+    <div class="urgency">
+      <span>⏳</span>Places limitées — les groupes sont volontairement restreints pour un suivi personnalisé. Inscrivez-vous dès maintenant pour garantir votre place !
+    </div>
+
+    <div class="social-proof">
+      <div class="stat">
+        <span class="num">80$</span>
+        <span class="label">par mois, tout inclus</span>
+    </div>
+    <div class="stat">
+      <span class="num">3</span>
+      <span class="label">groupes d'âge adaptés</span>
+      </div>
+      <div class="stat">
+        <span class="num">100%</span>
+        <span class="label">en ligne, à votre rythme</span>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      « Ma fille de 10 ans a adoré créer ses premiers visuels — l'enseignement est clair et adapté aux enfants. On recommande vivement ! »
+      <span class="author">— Une famille inscrite à Famille Tech</span>
+  </div>
+
+  <div class="card">
+    <div class="card-inner">
+      <iframe
+        src="https://shimmer-viper-a18.notion.site/ebd//384a751e47d74f1f92cd51c0f4d3f8b9"
+        title="Formulaire d'inscription Formation Canva été">
+        </iframe>
+      </div>
+  </div>
+
+    <p class="fallback">
+      Le formulaire ne s'affiche pas ? <a href="https://shimmer-viper-a18.notion.site/ebd//384a751e47d74f1f92cd51c0f4d3f8b9" target="_blank" rel="noopener">Ouvrir le formulaire dans un nouvel onglet</a>
+    </p>
+
+    <div class="faq">
+      <h3>Questions fréquentes</h3>
+
+    <details class="faq-item">
+      <summary>À qui s'adresse la formation ?</summary>
+        <p>La formation Canva été est offerte à tous les âges : des groupes adaptés existent pour les adultes, les ados et les enfants, avec un contenu et un rythme ajustés à chaque niveau.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Faut-il déjà connaître Canva ?</summary>
+        <p>Non. Le formulaire d'inscription vous demande votre niveau (de 1 à 5) simplement pour mieux adapter l'accompagnement — aucune expérience préalable n'est requise.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Comment se déroulent les rencontres ?</summary>
+        <p>La formation est entièrement en ligne. Les disponibilités (matin, après-midi, soir, ou jours précis) sont recueillies dans le formulaire pour former des groupes qui conviennent à l'horaire de chacun.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Quels sont les modes de paiement acceptés ?</summary>
+        <p>Le virement Interac et le paiement comptant sont acceptés. Le mode de paiement est optionnel à l'inscription — on peut aussi le confirmer directement avec vous par téléphone.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Mon enfant peut-il s'inscrire seul ?</summary>
+        <p>Pour les enfants, nous demandons le nom d'un parent ou tuteur ainsi qu'un contact d'urgence, afin d'assurer un encadrement sécuritaire tout au long de la formation.</p>
+    </details>
+
+    <details class="faq-item">
+        <summary>Puis-je annuler ou changer de formule après inscription ?</summary>
+      <p>Oui. Contactez-nous directement par téléphone pour toute modification — nous nous ferons un plaisir de vous accommoder.</p>
+      </details>
+    </div>
+
+    <div class="footer">
+      <div>Des questions ? Appelez-nous</div>
+      <div class="phone">438 622 1262</div>
+    </div>
+
+    <div class="brand">Famille Tech</div>
+
+  </body>
+  </html>
+  
